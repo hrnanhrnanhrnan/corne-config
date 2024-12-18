@@ -13,11 +13,6 @@
 
 / {
     behaviors {
-      #include "version.dtsi"
-      #ifndef VERSION_MACRO
-
-
-        #endif
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
