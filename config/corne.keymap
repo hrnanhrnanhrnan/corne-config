@@ -13,7 +13,6 @@
 
 / {
     behaviors {
-
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -79,10 +78,10 @@
             //                      | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp EXCL   &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT     &kp CARET  &kp AMPERSAND          &kp ASTERISK         &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS  &trans
-&kp ESC  &kp LC(X)  &kp LC(A)    &kp LC(C)  &kp LC(V)   &bt BT_SEL 3    &kp LEFT   &hrm_R RIGHT_GUI DOWN  &hrm_R RIGHT_ALT UP  &hrm_R RIGHT_CONTROL RIGHT  &kp RIGHT_SHIFT        &kp BACKSLASH
-&kp ESC  &trans     &kp HOME     &kp PG_UP  &kp PG_DN   &kp END         &trans     &kp MINUS              &kp EQUAL            &kp LEFT_BRACKET            &kp RIGHT_BRACKET      &trans
-                                 &trans     &trans      &trans          &trans     &trans                 &trans
+&kp TAB  &kp EXCL               &kp AT_SIGN         &kp HASH                   &kp DOLLAR               &kp PERCENT    &kp CARET  &kp AMPERSAND          &kp ASTERISK         &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS  &trans
+&kp ESC  &hrm_L LEFT_GUI LC(X)  &hm LEFT_ALT LC(A)  &hrm_L LEFT_CONTROL LC(C)  &hrm_L LEFT_SHIFT LC(V)  &kp LC(R)      &kp LEFT   &hrm_R RIGHT_GUI DOWN  &hrm_R RIGHT_ALT UP  &hrm_R RIGHT_CONTROL RIGHT  &kp RIGHT_SHIFT        &kp BACKSLASH
+&trans   &trans                 &kp HOME            &kp PG_UP                  &kp PG_DN                &kp END        &trans     &kp MINUS              &kp EQUAL            &kp LEFT_BRACKET            &kp RIGHT_BRACKET      &trans
+                                                    &trans                     &trans                   &trans         &trans     &trans                 &trans
             >;
         };
 
