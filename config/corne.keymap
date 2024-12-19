@@ -52,6 +52,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        acces_media_controls {
+            bindings = <&mo 3>;
+            key-positions = <24 36>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -78,10 +87,10 @@
             //                      | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp EXCL               &kp AT_SIGN         &kp HASH                   &kp DOLLAR               &kp PERCENT    &kp CARET  &kp AMPERSAND          &kp ASTERISK         &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS  &trans
-&kp ESC  &hrm_L LEFT_GUI LC(X)  &hm LEFT_ALT LC(A)  &hrm_L LEFT_CONTROL LC(C)  &hrm_L LEFT_SHIFT LC(V)  &kp LC(R)      &kp LEFT   &hrm_R RIGHT_GUI DOWN  &hrm_R RIGHT_ALT UP  &hrm_R RIGHT_CONTROL RIGHT  &kp RIGHT_SHIFT        &kp BACKSLASH
-&trans   &trans                 &kp HOME            &kp PG_UP                  &kp PG_DN                &kp END        &trans     &kp MINUS              &kp EQUAL            &kp LEFT_BRACKET            &kp RIGHT_BRACKET      &trans
-                                                    &trans                     &trans                   &trans         &trans     &trans                 &trans
+&kp TAB       &kp EXCL               &kp AT_SIGN         &kp HASH                   &kp DOLLAR               &kp PERCENT    &kp CARET  &kp AMPERSAND          &kp ASTERISK         &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS  &kp GRAVE
+&kp ESC       &hrm_L LEFT_GUI LC(X)  &hm LEFT_ALT LC(A)  &hrm_L LEFT_CONTROL LC(C)  &hrm_L LEFT_SHIFT LC(V)  &kp LC(R)      &kp LEFT   &hrm_R RIGHT_GUI DOWN  &hrm_R RIGHT_ALT UP  &hrm_R RIGHT_CONTROL RIGHT  &kp RIGHT_SHIFT        &kp BACKSLASH
+&kp CAPSLOCK  &trans                 &kp HOME            &kp PG_UP                  &kp PG_DN                &kp END        &trans     &kp MINUS              &kp EQUAL            &kp LEFT_BRACKET            &kp RIGHT_BRACKET      &trans
+                                                         &trans                     &trans                   &trans         &trans     &trans                 &trans
             >;
         };
 
@@ -93,10 +102,19 @@
             //                            | GUI |     |  SPC  |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3    &kp MINUS  &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &kp BSPC
-&kp LCTRL  &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &trans          &kp PLUS   &kp N4  &kp N5  &kp N6  &kp BSLH         &kp GRAVE
-&mo 2      &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &bootloader     &kp DOT    &kp N1  &kp N2  &kp N3  &kp PIPE         &kp TILDE
-                                             &trans           &trans           &trans          &trans     &trans  &kp N0
+&trans  &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3    &kp MINUS   &kp N7  &kp N8  &kp N9  &kp EQUAL        &kp BSPC
+&trans  &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &trans          &kp PLUS    &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp GRAVE
+&trans  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &bootloader     &kp KP_DOT  &kp N1  &kp N2  &kp N3  &kp KP_DIVIDE    &kp TILDE
+                                          &trans           &trans           &trans          &trans      &trans  &kp N0
+            >;
+        };
+
+        media_controls {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
