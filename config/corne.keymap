@@ -17,8 +17,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -29,10 +29,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <50>;
-            quick-tap-ms = <100>;
+            require-prior-idle-ms = <75>;
+            quick-tap-ms = <125>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
             hold-while-undecided-linger;
@@ -42,9 +42,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_R";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
-            require-prior-idle-ms = <50>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <75>;
             flavor = "tap-preferred";
             hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
@@ -82,8 +82,8 @@
             bindings = <
 &kp TAB  &kp Q              &kp W              &kp E                  &kp R                &kp T            &kp Y      &kp U               &kp I               &kp O                   &kp P                    &kp LEFT_BRACKET
 &kp ESC  &hrm_L LEFT_GUI A  &hrm_L LEFT_ALT S  &hrm_L LEFT_CONTROL D  &hrm_L LEFT_SHIFT F  &kp G            &kp H      &hrm_R RIGHT_GUI J  &hrm_R RIGHT_ALT K  &hrm_R RIGHT_CONTROL L  &hrm_R RIGHT_SHIFT SEMI  &kp SQT
-&mo 2    &kp Z              &kp X              &kp C                  &kp V                &kp B            &kp N      &kp M               &kp COMMA           &kp DOT                 &kp FSLH                 &mo 2
-                                               &mo 1                  &kp DELETE           &kp BACKSPACE    &kp SPACE  &kp ENTER           &mo 1
+&mo 1    &kp Z              &kp X              &kp C                  &kp V                &kp B            &kp N      &kp M               &kp COMMA           &kp DOT                 &kp FSLH                 &mo 1
+                                               &mo 2                  &kp DELETE           &kp BACKSPACE    &kp SPACE  &kp ENTER           &mo 2
             >;
         };
 
